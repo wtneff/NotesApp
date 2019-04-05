@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="noteForm">
+        <div class="noteBox"><textarea id="note" rows="25" cols = "50"></textarea></div>
+        <div class="button">
+            <input type="submit" onclick="storeNote()"></input>
+            <input type="button" value="Retrieve" onclick="readNote()"></input>
+            <input type="reset"></input>
+        </div>
+    </form>
+    <input type="button" id="readNote" value="Read Note" onclick="readNote()"></input>
+    <input type="button" id="reduceNote" value="Reduce Note" onclick="reduceNote()"></input>
+    <script src="driver.js"></script>
+</body>
+</html>
