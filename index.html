@@ -5,18 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Notes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
 </head>
-<body>
-    <form name="noteForm">
-        <div class="noteBox"><textarea id="note" rows="25" cols = "50"></textarea></div>
-        <div class="button">
-            <input type="submit" onclick="storeNote()"></input>
-            <input type="button" value="Retrieve" onclick="readNote()"></input>
-            <input type="reset"></input>
+<body onload="count()">
+    <div class="flex-container">
+        <form name="noteForm">
+            Note:
+            <br>
+            <textarea id="note" rows="10" cols = "50"></textarea>
+            <br>
+            <input type="button" value="Store Note" class="button" onclick="storeNote()"></input>
+            <input type="button" value="Read Note" class="button" onclick="readNote()"></input>
+            
+            
+        </form>
+        <!-- <input type="button" id="reduceNote" value="Reduce Note" class="button" onclick="reduceNote()"></input> -->
+        
+        <div class="count">
+            <p id="count">There are no notes!</p>
         </div>
-    </form>
-    <input type="button" id="readNote" value="Read Note" onclick="readNote()"></input>
-    <input type="button" id="reduceNote" value="Reduce Note" onclick="reduceNote()"></input>
+        <div class="display">
+            <div class="message"><p id="message"></p></div>
+        </div>
+        <div class="nav">
+            <input type="button" value="Previous" class="button" onclick="previous()"></input>
+            <input type="button" value="Next" class="button" onclick="next()"></input>
+            <input type="button" value="Remove Note" class="button" onclick="clearNote()"></input>
+        </div>
+            <!-- <div class="nav">
+                <p onclick="previous()" ><i class="fas fa-arrow-circle-left fa-3x"></i></p>
+                <p onclick="next()"><i class="fas fa-arrow-circle-right fa-3x"></i></p>
+            </div> -->
+    </div>
     <script src="driver.js"></script>
 </body>
 </html>

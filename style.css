@@ -1,10 +1,35 @@
 body {
-    background-color: #000;
-    text-align: center;
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-input {
-    width: 100px;
-    margin: 8px;
+.flex-container {
+  display: flex;
+  flex-direction: column;
 }
 
+i {
+  color: #195e58;
+}
+
+.button {
+  width: 100px;
+  margin: 8px;
+  background-color: #195e58;
+  border: none;
+}
+
+#title {
+  margin: 10px;
+}
+
+.display {
+  margin: auto;
+  background-color: #fff;
+  color: #000;
+  font-size: 12px;
+  width: 50%;
+  height: 50px;
+}
